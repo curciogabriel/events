@@ -1,0 +1,14 @@
+services:
+  mysql:
+    image: mysql:8.4
+    restart: always
+    container_name: mysql-nlw
+    environment:
+      - MYSQL_ROOT_PASSWORD=mysql
+    ports:
+      - '3336:3306'
+    networks:
+      - my-network
+networks:
+  nlw-network:
+    driver: bridge
